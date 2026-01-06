@@ -1,0 +1,29 @@
+// servidores.component.scss
+@use '../../shared/produto-list.scss';
+
+
+.voltar-home {
+  margin-top: 2rem;
+  text-align: center;
+
+  // estiliza o botão dentro do container voltar-home
+  .product-item__buy-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, transform 0.2s;
+
+    &:hover {
+      background-color: darken(#ff6600, 10%);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
