@@ -1,38 +1,14 @@
 .home-container {
   .home-bg {
-    background-image: url('/assets/img/tecnologia.jpg'); //  sua imagem
+    background-image: linear-gradient(
+      135deg,
+      #0000FF 0%,   // azul forte
+      #FFFFFF 50%,  // faixa branca
+      #FF0000 100%  // vermelho forte
+    );
     background-size: cover;
     background-position: center;
-    transform: scale(1); // estado inicial
-    animation: zoomForward 20s ease-in-out infinite alternate; // animação contínua
+    transform: scale(1);
+    animation: zoomForward 20s ease-in-out infinite alternate;
   }
-}
-
-// animação de zoom projetado
-@keyframes zoomForward {
-  from {
-    transform: scale(1);   // normal
-  }
-  to {
-    transform: scale(1.1); // levemente projetado para frente
-  }
-}
-.powered-by {
-  @apply absolute bottom-24 right-20; // 🔑 mais para cima (bottom maior) e mais para esquerda (right maior)
-  animation: fadeIn 2s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-
-.powered-by {
-  position: absolute;
-  bottom: 27rem;   // 🔑 ajusta altura
-  right: 37rem;    // 🔑 ajusta lateral
-  font-size: 5rem;
-  font-weight: bold;
-  color: #dc2626; // vermelho Tailwind (text-red-600)
 }
