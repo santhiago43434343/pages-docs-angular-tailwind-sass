@@ -1,12 +1,14 @@
 // servidores.component.scss
-@use '../../shared/produto-list.scss';
+@use '../../shared/produto-list.scss' as *; // importa variáveis globais
+@use "sass:color";
 
+// define a cor derivada fora do seletor
+$primary-hover: color.scale($primary-color, $lightness: -20%);
 
 .voltar-home {
   margin-top: 2rem;
   text-align: center;
 
-  // estiliza o botão dentro do container voltar-home
   .product-item__buy-button {
     background-color: #ff6600;
     color: #fff;
@@ -18,7 +20,7 @@
     transition: background-color 0.2s ease-in-out, transform 0.2s;
 
     &:hover {
-      background-color: darken(#ff6600, 10%);
+      background-color: $primary-hover; // usa a variável já definida
       transform: translateY(-2px);
     }
 
